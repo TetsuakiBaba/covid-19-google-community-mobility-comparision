@@ -46,7 +46,3 @@ python compare.py
 ```
 
 Then you can find graphs in result_images directory and tsv files in result_tsvs directory.
- 
-# Note
-先に記述したとおりですが、OCR処理によりデータ欠損等が含まれる場合がありますので、その点を十分に理解した上でご利用ください。
- 
