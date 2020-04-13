@@ -1,4 +1,5 @@
 # COVID-19 Google Mobility Reports Comparision
+**<span style="color:white; background-color:red">Please keep in mind that Google does not recommend using this data to compare changes between countries because location accuracy and the understanding of categorized places varies from region to region. Sorted value does not have any meaning for country ranking and so on. Please do not use thie result for medical diagnostic, prognostic, or treatment purposes.  </span>**
 
 This repository automatically generates a graph listing the rate of increase and decrease for a given city or country from [COVID-19 Community Mobility Reports] (https://www.google.com/covid19/mobility/) provided by Google.
 Since the original data is provided as a PDF, we use data automatically extracted from [covid-mobility-data](https://github.com/kylemcdonald/covid-mobility-data) by Kyle Mcdonald.
@@ -11,7 +12,7 @@ The graph shows the rate of increase and decrease from normal times in percentag
 and is stored in Please note that the TSV data also includes the rate of increase or decrease for past dates other than the most recent date, so if you want to graph the increase for each date, please use this link.
 
 
-## Graph for each item (data of March 29, 2020)
+## Graph for each item (data of April 5th, 2020)
 
 * retail & recreation
 * Grocery & pharmacy
@@ -45,4 +46,4 @@ cd ../
 python compare.py
 ```
 
-Then you can find graphs in result_images directory and tsv files in result_tsvs directory.
+Then you can find graphs in result_images directory and csv files in result_csvs directory.

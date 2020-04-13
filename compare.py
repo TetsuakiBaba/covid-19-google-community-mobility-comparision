@@ -9,6 +9,17 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Edit array to search city or country name
+'''
+search_name = [
+    'Tokyo',
+    'New York',
+    'California',
+    'Edinburgh',
+    'Glasgow City',
+    'Greater London',
+    'Tronto'
+]
+'''
 search_name = [
     'Japan', 
     'Spain','United States', 
@@ -50,6 +61,7 @@ search_name = [
     'Finland',
     'Peru',
     'South Africa']
+
 category_name = ['Retail & recreation', 'Grocery & pharmacy', 'Parks', 'Transit stations', 'Workplace', 'Residential']
 category_retail = []
 category_grocery = []
@@ -77,8 +89,9 @@ def createRankingBarGraph(title, category, data):
     #plt.show()
     plt.savefig('result_images/'+category+'.png')
 
-all_tsv_files = glob.glob('./covid-mobility-data/tsv/*'+'.tsv', recursive=True)
+all_tsv_files = glob.glob('./covid-mobility-data/tsvs/*'+'.tsv', recursive=True)
 
+header = []
 for filename in all_tsv_files:
     f = open(filename, 'r')
     reader = csv.reader(f, delimiter="\t")
@@ -147,34 +160,40 @@ sorted_category_transit = sorted(category_transit, key=lambda x : x[-1],reverse=
 sorted_category_workplace = sorted(category_workplace, key=lambda x : x[-1],reverse=False)
 sorted_category_residential = sorted(category_residential, key=lambda x : x[-1],reverse=True)
 
-f = open('result_tsvs/retail.tsv', "w")
+f = open('result_csvs/retail.csv', "w")
+print(*header, file=f, sep=",")
 for r in sorted_category_retail:
-    print(r, file=f)
+    print(*r, file=f, sep=",")
 f.close();
 
-f = open('result_tsvs/grocery.tsv', "w")
+f = open('result_csvs/grocery.csv', "w")
+print(*header, file=f, sep=",")
 for r in sorted_category_grocery:
-    print(r, file=f)
+    print(*r, file=f, sep=',')
 f.close();    
 
-f = open('result_tsvs/parks.tsv', "w")
+f = open('result_csvs/parks.csv', "w")
+print(*header, file=f, sep=",")
 for r in sorted_category_parks:
-    print(r, file=f)
+    print(*r, file=f, sep=',')
 f.close();    
 
-f = open('result_tsvs/transit.tsv', "w")
+f = open('result_csvs/transit.csv', "w")
+print(*header, file=f, sep=",")
 for r in sorted_category_transit:
-    print(r, file=f)
+    print(*r, file=f, sep=',')
 f.close();    
 
-f = open('result_tsvs/workplace.tsv', "w")
+f = open('result_csvs/workplace.csv', "w")
+print(*header, file=f, sep=",")
 for r in sorted_category_workplace:
-    print(r, file=f)
+    print(*r, file=f, sep=',')
 f.close();    
 
-f = open('result_tsvs/residential.tsv', "w")
+f = open('result_csvs/residential.csv', "w")
+print(*header, file=f, sep=",")
 for r in sorted_category_residential:
-    print(r, file=f)
+    print(*r, file=f, sep=',')
 f.close();    
 
 
