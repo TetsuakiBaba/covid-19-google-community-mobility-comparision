@@ -11,6 +11,8 @@ The graph shows the rate of increase and decrease from normal times in percentag
   * tsvs/: Prefectural data for each item.
 and is stored in Please note that the TSV data also includes the rate of increase or decrease for past dates other than the most recent date, so if you want to graph the increase for each date, please use this link.
 
+* Barplot race sample: https://public.flourish.studio/visualisation/1916517/
+
 
 ## Graph for each item (data of April 5th, 2020)
 
