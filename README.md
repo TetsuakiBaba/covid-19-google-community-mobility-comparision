@@ -49,4 +49,11 @@ cd ../
 python compare.py
 ```
 
+```bash
+git clone https://github.com/TetsuakiBaba/COVID-19-Google-Mobility-Comparision
+cd COVID-19-Google-Mobility-Comparision
+curl -O https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv
+python createCsv.py
+```
+
 Then you can find graphs in result_images directory and csv files in result_csvs directory.
