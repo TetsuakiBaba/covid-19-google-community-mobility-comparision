@@ -1,15 +1,18 @@
 # COVID-19 Google Mobility Reports Comparision
 **<span style="color:white; background-color:red">Please keep in mind that Google does not recommend using this data to compare changes between countries because location accuracy and the understanding of categorized places varies from region to region. Sorted value does not have any meaning for country ranking and so on. Please do not use thie result for medical diagnostic, prognostic, or treatment purposes.  </span>**
 
-This repository automatically generates a graph listing the rate of increase and decrease for a given city or country from [COVID-19 Community Mobility Reports] (https://www.google.com/covid19/mobility/) provided by Google.
+~~This repository automatically generates a graph listing the rate of increase and decrease for a given city or country from [COVID-19 Community Mobility Reports] (https://www.google.com/covid19/mobility/) provided by Google.
 Since the original data is provided as a PDF, we use data automatically extracted from [covid-mobility-data](https://github.com/kylemcdonald/covid-mobility-data) by Kyle Mcdonald.
-Due to OCR processing, there is a possibility that the figures presented may contain errors. See Accuracy at [covid-mobility-data](https://github.com/kylemcdonald/covid-mobility-data) for more on that.
+Due to OCR processing, there is a possibility that the figures presented may contain errors. See Accuracy at [covid-mobility-data](https://github.com/kylemcdonald/covid-mobility-data) for more on that.~~
+
+We can use google's csv which is released from 11th Apri, 2020. 
+  * https://www.google.com/covid19/mobility/
 
 # Result
 The graph shows the rate of increase and decrease from normal times in percentage terms according to the following items, ranked by country or city. The execution results are each
-  * result_image/: each graph image
-  * tsvs/: Prefectural data for each item.
-and is stored in Please note that the TSV data also includes the rate of increase or decrease for past dates other than the most recent date, so if you want to graph the increase for each date, please use this link.
+  * ~~result_image/: each graph image~~ not working now
+  * csvs/: Prefectural/country data for each item.
+and is stored in Please note that the CSV data also includes the rate of increase or decrease for past dates other than the most recent date, so if you want to graph the increase for each date, please use this link.
 
 * Barplot race sample: https://public.flourish.studio/visualisation/1916517/
 * [sample video of barplot race sample](sample.mov)
@@ -38,16 +41,6 @@ and is stored in Please note that the TSV data also includes the rate of increas
 # Getting Started
 First, follow the steps in [covid-mobility-data](https://github.com/kylemcdonald/covid-mobility-data) to generate it.
 You can then modify the search_name array in compare.py according to the city or country you want to compare.
-
-```bash
-git clone https://github.com/TetsuakiBaba/COVID-19-Google-Mobility-Comparision
-cd COVID-19-Google-Mobility-Comparision
-git clone https://github.com/kylemcdonald/covid-mobility-data.git
-cd covid-mobility-data
-# then,follow the steps in [covid-mobility-data](https://github.com/kylemcdonald/covid-mobility-data) 
-cd ../
-python compare.py
-```
 
 ```bash
 git clone https://github.com/TetsuakiBaba/COVID-19-Google-Mobility-Comparision
